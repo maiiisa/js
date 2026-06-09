@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <!-- Favicon  Tag -->
+    <link rel="icon" href="../favicon.webp" sizes="32x32"/>
+    <title>DESAFIO 02 - OPERAÇÃO COM NÚMEROS - HTML</title>
+    <meta name="description" content="...">
+    <meta name="keywords" content="sites, web, frontend">
+    <meta name="author" content="Maisa Limeira, limeiramaisa445@gmail.com">
+</head>
+<body>
+    <h1>REALIZANDO OPERAÇÃO COM NÚMEROS EM JS <mark>E EXIBINDO DIRETAMENTE NO HTML</mark></h1>
+    <hr>
+    <h2 id="num1"></h2>
+    <h2 id="operacao"></h2>
+    <h2 id="num2"></h2>
+    --------------------
+    <h2 id="resultado"></h2>
+    <script>
+        window.alert("Seja bem-vindo a ferramenta de operação de números");
+        let numero1 = window.prompt("DIGITE O 1º NÚMERO: ");
+        let numero2 = window.prompt("DIGITE O 2º NÚMERO: ");
+        let operacao = window.prompt("QUAL OPERAÇÃO: (+) SOMA OU (-) SUBTRAÇÃO ");
+        let resultado = 0
+        
+        numero1 = parseInt(numero1) // parseFloat
+        numero2 = parseInt(numero2) // parseFloat
+        
+        if(operacao=="+"){
+            resultado = numero1 + numero2
+
+        }else if (operacao =="-"){
+            resultado = numero1 - numero2
+        }
+        else{
+            window.alert("Você não informou um operador VÁLIDO!");
+        }
+        document.getElementById("num1").innerText = numero1;
+        document.getElementById("num2").innerText = numero2;
+        document.getElementById("operacao").innerText = operacao;
+        document.getElementById("resultado").innerText = resultado;
+        
+        
+    </script>
+</body>
+<html>
