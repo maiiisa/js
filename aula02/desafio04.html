@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<cabeçalho>
+    <meta charset="utf-8">
+    <!-- Meta Tag Responsiva -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faviicon Tag -->
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+    <title>DESAFIO 04 - JAVASCRIPT</title>
+    <meta name="description" content="Conteúdo das Aulas de JS">
+    <meta name="keywords" content="sites, web, frontend">
+    <meta name="autor" content="Maisa Limeira, limeiramaisa445@gmail.com">
+
+    </head>
+
+    <body>
+        <h1><mark>MANIPULANDO ELEMENTOS (TAGS)</mark> DO HTML A PARTIR DO JS</h1>
+        <hr>
+        <div>
+            <img src=img/corinthians2_0.jpg alt="img" title="Corinthians2"> <br>
+
+            <button onclick="trocar_imagem()">TROCAR IMAGEM</button>
+        </div>
+        <script>
+            function trocar_imagem(){
+                const tag_img = document.getElementsByTagName('img')[0];
+               
+                if (tag_img.title=="Corinthians2"){
+                    tag_img.src="img/corinthians.jpg";
+                    tag_img.title="Luffy"
+                }else{
+                    tag_img.src="img/corinthians2_0.jpg";
+                    tag_img.title="Corinthians2"
+                }            
+        }
+
+
+        </script>
+        </hr>
+
+    </body>
+
+
+</html>
